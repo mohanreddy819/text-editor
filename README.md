@@ -14,7 +14,7 @@ A web-based collaborative text editor that allows multiple users to edit the sam
 Clone the Repository by 
 ```bash
 git clone https://github.com/mohanreddy819/text-editor/tree/main.git
-cd code_editor
+cd real-time-text-editor
 ```
 ### Setup Virtual Environment and activate it
 ```bash
@@ -26,7 +26,7 @@ cd code_editor
    ```bash
      npm install
    ```
-   or ``` by manually installing them from the requirements folder in ``` 
+   or ``` by manually installing them from the requirements.txt in folder real-time-text-editor``` 
 2. Run the react server
    ```bash
      npm start

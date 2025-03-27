@@ -36,7 +36,7 @@ const saveToDB = async (docId, title, content) => {
   try {
     const db = await initDB();
     
-    // Ensure content is in {ops: [...]} format
+
     const normalizedContent = Array.isArray(content) 
       ? { ops: content } 
       : content;
@@ -88,9 +88,9 @@ function Editor() {
   const ydocRef = useRef(null);
   const bindingRef = useRef(null);
 
-  // Custom modules that combine both toolbar and cursors
+
   const customModules = {
-    ...modules, // Spread the imported modules
+    ...modules, 
     cursors: {
       transformOnTextChange: true,
       hideDelay: 1000,
@@ -131,8 +131,8 @@ function Editor() {
     Quill.register("modules/cursors", QuillCursors);
 
     const editor = new Quill(editorRef.current, {
-      modules: customModules, // Use our combined modules
-      formats: formats,       // Use imported formats
+      modules: customModules, 
+      formats: formats,       
       placeholder: "Start collaborating...",
       theme: "snow"
     });
@@ -207,7 +207,7 @@ function Editor() {
       const delta = ytext.toDelta();
       console.log("Raw Delta content:", delta);
       
-      // Ensure we're saving in the correct format
+
       await saveToDB(docId, docName, delta);
       
       alert("Document saved successfully!");
@@ -248,19 +248,19 @@ function Editor() {
 
   return (
     <div className="editor-wrapper">
-      {/* Toolbar Header */}
+
       <div className="toolbar-container">
         <div className="editor-header">
           <h2>Real-Time Collaborative Editor</h2>
             <br></br>
-          {/* User Info (Only shows if logged in) */}
+
           {username && (
             <span className="user-info">
               <i className="user-icon">👤</i> {username}
             </span>
           )}
   
-          {/* Document Actions */}
+  
           {docId && (
             <div className="document-info">
               <span className="doc-name">
@@ -269,7 +269,7 @@ function Editor() {
             </div>
           )}
   
-          {/* Action Buttons */}
+       
           <div className="action-buttons">
             <button onClick={createDocument} className="primary">New Doc</button>
             {docId && <button onClick={saveDocument} className="primary">Save</button>}
@@ -289,11 +289,11 @@ function Editor() {
           </div>
         </div>
   
-        {/* Quill Toolbar */}
+       
         <QuillToolbar />
       </div>
   
-      {/* Editor Container */}
+
       <div className="editor-container">
         <div ref={editorRef} className="quill-editor" />
       </div>

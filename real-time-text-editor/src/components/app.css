@@ -1,4 +1,4 @@
-/* Reset default styles */
+
 body {
   margin: 0;
   padding: 0;
@@ -6,14 +6,14 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Main container */
+
 .editor-wrapper {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
 
-/* Header with toolbar */
+
 .toolbar-container {
   background: white;
   padding: 15px;
@@ -54,7 +54,7 @@ body {
   border-color: #2b579a;
 }
 
-/* Quill toolbar */
+
 #toolbar {
   background: white;
   border: none !important;
@@ -67,7 +67,7 @@ body {
   margin-right: 12px !important;
 }
 
-/* Editor container */
+
 .editor-container {
   flex: 1;
   width: 100%;
@@ -77,7 +77,7 @@ body {
   background: #e2e4e6;
 }
 
-/* Document styling */
+
 .quill-editor {
   width: 100%;
   max-width: 210mm;
@@ -90,7 +90,7 @@ body {
   border-radius: 5px;
 }
 
-/* Content styling */
+
 .ql-editor {
   font-size: 12pt;
   line-height: 1.5;
@@ -118,7 +118,7 @@ body {
   margin-bottom: 0.5em;
 }
 
-/* Document List Styles */
+
 .document-list-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -180,5 +180,3 @@ body {
   color: #666;
   margin-bottom: 20px;
 }
-
-/* Keep all your existing toolbar and header styles from Editor.js */
